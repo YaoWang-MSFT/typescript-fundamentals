@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: aaaa
-  namespace: namespace-workflow-1679086919507
+  name: ccc
+  namespace: namespace-workflow-1681325139927
 spec:
   type: LoadBalancer
   selector:
-    app: aaaa
+    app: ccc
   ports:
     - protocol: TCP
       port: 80

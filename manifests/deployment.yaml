@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aaaa
+  name: ccc
   labels:
-    app: aaaa
-  namespace: namespace-workflow-1679086919507
+    app: ccc
+  namespace: namespace-workflow-1681325139927
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aaaa
+      app: ccc
   template:
     metadata:
       labels:
-        app: aaaa
+        app: ccc
     spec:
       containers:
-        - name: aaaa
-          image: tdprkhidayatbp3.azurecr.io/image-workflow-1679086919507:latest
+        - name: ccc
+          image: acrworkflow1681325139927.azurecr.io/image-workflow-1681325139927:latest
           ports:
             - containerPort: 80
