@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aaaa
+  name: yw-test-12
   labels:
-    app: aaaa
-  namespace: namespace-workflow-1679086919507
+    app: yw-test-12
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1734385709530
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aaaa
+      app: yw-test-12
   template:
     metadata:
       labels:
-        app: aaaa
+        app: yw-test-12
     spec:
       containers:
-        - name: aaaa
-          image: tdprkhidayatbp3.azurecr.io/image-workflow-1679086919507:latest
+        - name: yw-test-12
+          image: wyregistry.azurecr.io/image-workflow-1734385709530:latest
+          imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3000
